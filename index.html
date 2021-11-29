@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thankfulness Project:</title>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Verdana, sans-serif;
+      text-align: center;
+      background-color: black;
+    }
+
+    .mySlides {
+      display: none;
+    }
+
+    img {
+      vertical-align: middle;
+    }
+
+    h2{
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <br>
+  <br>
+
+  <h2>Thankfulness Project:</h2>
+  <br>
+
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="https://images.daznservices.com/di/library/sporting_news/c5/55/college-world-series-061119-getty-ftr_1mn1mc69a15i81qq0i7ylegil5.jpg?t=1284649787&quality=100" style=width:550px;>
+      <div class="text">I'm Thankful for the game of Baseball for always
+      entertaining and pushing me to be the best I can!</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="https://nprecovery.com/wp-content/uploads/2018/10/Family.jpg" style="width:550px;">
+      <div class="text">I'm Thankful for my family for always being super
+      supportive and kind!</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="https://media.npr.org/assets/img/2020/02/20/friendship-1_wide-0da1e0fd81a24fb90bad34c396f4a5b7348146d0.jpg?s=1400" style="width:550px;">
+      <div class="text">I'm Thankful for my friends for always making me laugh
+      and having a good time!</div>
+    </div>
+
+  </div>
+  <br>
+
+  <div style="text-align:center">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+
+  <script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {
+        slideIndex = 1
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+  </script>
+
+</body>
+
+</html>
